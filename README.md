@@ -1,16 +1,20 @@
-# _brainfuck.js_
+brainfuck.js
+============
 
-_A simple Brainfuck interpreter written in JavaScript_
+A simple Brainfuck interpreter written in JavaScript
 
 ## Usage
 ```html
 <div id="output"></div>
 <script src="brainfuck.js"></script>
 <script type="text/javascript">
-    var program = Brainfuck('++++++++++[>+++++++>++++++++++>+++>+<<<<-]>++.>+.+++++++..+++.>++.<<+++++++++++++++.>.+++.------.--------.>+.>.'); 
+    var program = new Brainfuck('++++++++++[>+++++++>++++++++++>+++>+<<<<-]>++.>+.+++++++..+++.>++.<<+++++++++++++++.>.+++.------.--------.>+.>.'); 
     var output = document.getElementById('output');
     program.write = function(charCode) {
         output.innerHTML = output.innerHTML + String.fromCharCode(charCode);
+    };
+    program.read = function() {
+        return String.charCodeAt(prompt('Input'), 0);
     };
     program.run();
 </script>
@@ -18,7 +22,7 @@ _A simple Brainfuck interpreter written in JavaScript_
 
 ## FAQ
 
-**1. What's this peace of crap?**
+**1. What's this piece of crap?**
 
    Propably nothing you should be concerned with.
 
