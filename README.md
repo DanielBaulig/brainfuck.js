@@ -24,11 +24,11 @@ A simple Brainfuck interpreter written in JavaScript
 
 **1. What's this piece of crap?**
 
-   Propably nothing you should be concerned with.
+   Probably nothing you should be concerned with.
 
 **2. Will you keep working on this?**
 
-   Except for bugfixes, not. Look at it: it's done.
+   Except for bugfixes, no. Look at it: it's done.
 
 **3. Can I prevent the brainfuck program from blocking my JavaScript execution?**
 
@@ -37,6 +37,11 @@ A simple Brainfuck interpreter written in JavaScript
 **4. Why is this no node module?**
 
    Because I wanted a Brainfuck interpreter for the browser. I might write an asynchronous, stream compatible interpreter for node at a later point. I _might_. Don't quote me on this.
+
+## Contributors
+
+* Daniel Baulig ~ Main developer
+* 316k ~ Small bugfix, corrected typos in README.md
 
 ## License
 
