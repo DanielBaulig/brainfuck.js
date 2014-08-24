@@ -27,7 +27,7 @@ Brainfuck.prototype.run = function(instructions) {
         this.write(this.data[this.p] || 0);
         break;
       case ',':
-        this.data[this.ip] = this.read();
+        this.data[this.p] = this.read();
         break;
       case '[':
         var openBrackets = 1;

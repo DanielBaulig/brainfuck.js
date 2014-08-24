@@ -1,16 +1,20 @@
-# _brainfuck.js_
+brainfuck.js
+============
 
-_A simple Brainfuck interpreter written in JavaScript_
+A simple Brainfuck interpreter written in JavaScript
 
 ## Usage
 ```html
 <div id="output"></div>
 <script src="brainfuck.js"></script>
 <script type="text/javascript">
-    var program = Brainfuck('++++++++++[>+++++++>++++++++++>+++>+<<<<-]>++.>+.+++++++..+++.>++.<<+++++++++++++++.>.+++.------.--------.>+.>.'); 
+    var program = new Brainfuck('++++++++++[>+++++++>++++++++++>+++>+<<<<-]>++.>+.+++++++..+++.>++.<<+++++++++++++++.>.+++.------.--------.>+.>.'); 
     var output = document.getElementById('output');
     program.write = function(charCode) {
         output.innerHTML = output.innerHTML + String.fromCharCode(charCode);
+    };
+    program.read = function() {
+        return String.charCodeAt(prompt('Input'), 0);
     };
     program.run();
 </script>
@@ -18,13 +22,13 @@ _A simple Brainfuck interpreter written in JavaScript_
 
 ## FAQ
 
-**1. What's this peace of crap?**
+**1. What's this piece of crap?**
 
-   Propably nothing you should be concerned with.
+   Probably nothing you should be concerned with.
 
 **2. Will you keep working on this?**
 
-   Except for bugfixes, not. Look at it: it's done.
+   Except for bugfixes, no. Look at it: it's done.
 
 **3. Can I prevent the brainfuck program from blocking my JavaScript execution?**
 
@@ -33,6 +37,11 @@ _A simple Brainfuck interpreter written in JavaScript_
 **4. Why is this no node module?**
 
    Because I wanted a Brainfuck interpreter for the browser. I might write an asynchronous, stream compatible interpreter for node at a later point. I _might_. Don't quote me on this.
+
+## Contributors
+
+* Daniel Baulig ~ Main developer
+* 316k ~ Small bugfix, corrected typos in README.md
 
 ## License
 
